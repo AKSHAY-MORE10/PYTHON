@@ -1,0 +1,95 @@
+# Numpy
+
+# 1 Create Arrays
+# ●	create a 1-dimensional array arr1 with elements [1, 2, 3, 4, 5]? 
+# ●	create a 2-dimensional array arr2 with elements [[1, 2, 3], [4, 5, 6]]? 
+
+# solution
+import numpy as np
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+# print(arr1)
+# print(arr2)
+
+
+
+# 2 Basic Array Operations: 
+# ●	What is the shape of arr1 and arr2? 
+# ●	calculate the sum of all elements in arr1? 
+# ●	calculate the mean of all elements in arr2? 
+
+splite_arr1 = arr1.shape
+splite_arr2 = arr2.shape
+# print(splite_arr1)
+# print(splite_arr2)  
+
+sum_arr1 = arr1.sum()
+mean_arr2 = arr2.mean()
+# print(sum_arr1)
+# print(mean_arr2)  
+
+column_sum = np.sum(arr1, axis=0)
+# print(column_sum)
+row_sum = np.sum(arr2, axis=1)
+# print(row_sum)
+
+
+# Sum along a flattened array
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+flat_sum = np.sum(arr2.flatten())
+print(flat_sum) #21
+
+
+
+
+# 3 Generate Arrays: 
+# ●	create a 2x3 array of zeros? 
+# ●	create a 3x2 array of ones? 
+# ●	create a 2x2 array of random numbers between 0 and 1? 
+
+arraysZeros = np.zeros((2, 3))
+# print(arraysZeros)
+
+arraysones = np.ones((3, 2))
+# print(arraysones)
+
+arraysRandom = np.random.rand(2, 2)
+# print(arraysRandom) 
+
+
+
+# 4 Element-wise Operations: 
+# ●	Given two arrays arr3 = np.array([1, 2, 3, 4, 5]) and arr4 = np.array([6, 7, 8, 9, 10]), compute their element-wise sum? 
+# ●	Given arr3 and arr4, compute their element-wise multiplication? 
+
+arr3 = np.array([1, 2, 3, 4, 5])
+arr4 = np.array([6, 7, 8, 9, 10])
+
+sumElementWise = arr3 + arr4
+# print(sumElementWise)
+multiplyElementWise = arr3 * arr4
+# print(multiplyElementWise)
+
+
+
+# Matrix Operations: 
+# ●	perform matrix multiplication on the following matrices: 
+# mat1 = np.array([[1, 2], [3, 4]]) 
+# mat2 = np.array([[5, 6], [7, 8]]) 
+# ●	compute the transpose of mat1? 
+
+
+
+
+mat1 = np.array([[1, 2], [3, 4]]) 
+mat2 = np.array([[5, 6], [7, 8]]) 
+
+
+matrixMult = np.dot(mat1, mat2)
+# print(matrixMult)
+
+transpose_mat1 = mat1.T
+# print(transpose_mat1)
+
+transpose_mat2 = mat2.T
+# print(transpose_mat2)
